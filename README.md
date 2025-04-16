@@ -10,8 +10,8 @@ Catálogo de filmes
 
 ## Print da home-page
 
-![Print da home-page](./public/Imagens/homepage.jpg)
+![Print da home-page](./Imagens/homepage.jpg)
 
 ## Print da página de detalhes
 
-![Print da página de detalhes](./public/Imagens/detalhes.jpg)
+![Print da página de detalhes](./Imagens/detalhes.jpg)
