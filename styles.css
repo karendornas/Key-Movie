@@ -1,0 +1,682 @@
+@import url('https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body{
+    margin: 0px;
+    background-color: rgb(34, 4, 48);
+}
+
+header{
+    background-color: black;    
+    display: flex; 
+    position: relative;
+    font-size: 25px;
+    padding: 7px 35px 20px;
+}
+
+.menu{
+    margin-left: 20px;
+    margin-top: 1%;
+    color: white;
+    text-decoration: none;
+    justify-content: center;
+}
+
+.movie{
+    padding-left: 4%;
+    color: white;
+    font-size: 40px;
+    text-decoration: none;
+    font-family: "K2D", sans-serif;
+}
+
+#perfil{
+    margin-left: 87%;
+    border-radius: 4%;
+    width: 72px;
+    height: 72px;
+    overflow: hidden;
+    position:absolute;
+}
+
+.search-cat{
+    position: relative;
+    padding: 3px 15px;
+    margin-left: 100%;
+    margin-top: 6%;
+    color: black;
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+}
+
+.search-nome{
+    position: relative;
+    padding: 3px 15px;
+    margin-left: 450%;
+    margin-top: 6%;
+    color: black;
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+}
+
+.nome{
+    margin-left: 75%;
+    padding-top: 1%;
+    color: white;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+}
+
+.btn-enter{
+    width: 100px;
+    height: 50px;
+    padding: 1px 15px;
+    margin-left: 5%;
+    margin-top: 5%;
+    border-radius: 10%;
+    color: white;
+    background-color: black;
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+}
+
+.btn-enter:hover{
+    cursor: pointer;
+}
+
+.btn-enter1{
+    /* background-image: url(./Imagens/ainda_estou.jpg); */
+    position: relative;
+    width: 100px;
+    height: 50px;
+    padding: 1px 15px;
+    margin-left: 5%;
+    margin-top: 5%;
+    border-radius: 10%;
+    color: white;
+    background-color: black;
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+}
+
+.btn-enter1:hover{
+    cursor: pointer;
+}
+
+/* .btn-wicked{
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    width: 20%;
+    flex-direction: row;
+    margin-top: 0px;
+    margin-bottom: 50%;
+    padding-left: 100%;
+    padding: -5px 100px;
+    gap: 30px;
+    background-image: url(./Imagens/ainda_estou_home.jpg);
+    background-size: cover;
+} */
+
+/* .btn-w{
+    width: 20%;
+    height: 20%;
+    
+} */
+
+main{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(34, 4, 48)
+}
+
+.search-box{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 200px;
+}
+
+.icone-pesquisa{
+    color: rgb(255, 255, 255);
+    margin-left: 1350px;
+    padding: 2px 2px;
+    width: 50px;
+    height: 60px;
+}
+
+#search-text{
+    width: 400px;
+    padding: 20px;
+    font-size: 16px;
+    outline: none; 
+}
+
+#fundo{
+    display: flex;
+    position: relative;
+    padding-top: 5%;
+    width: 825px;
+    height: 510px;
+    overflow: hidden;
+    margin-left: 49%;
+    opacity: 0.4;
+}
+
+#destaque{
+    width: 100%;
+    height: 480px;
+    margin: 0 auto;
+    margin-top: 40px;
+    position:absolute;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.descricao{
+    display: flex;
+    flex-direction: column;
+    position:relative;
+    padding-top: 1px;
+    margin-top: -400px;
+}
+
+.name{
+    display: flex;
+    font-family: "K2D", sans-serif;
+    justify-content: end;
+    padding-right: 19%;
+    font-size: 55px;
+    text-decoration: none;
+}
+
+p{
+    display: flex;
+    font-family: "K2D", sans-serif;
+    font-size: 20px;
+    justify-content: end;
+    padding-right:9%;
+    padding-top: 20px;
+    padding-left: 50%;
+    text-align: justify;
+}
+
+.lista{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: "K2D", sans-serif;
+    padding-left: 65%;
+    padding-right: 9%;
+    padding-top: 145px;
+}
+
+.assistir{
+    text-decoration: none;
+}
+
+.add{
+    text-decoration: none;
+}
+
+article{
+    color: black;
+    justify-content: center;
+    align-items: center;
+    position: static;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    position:relative;
+    padding-top: 110px;
+    background-color: rgb(34, 4, 48);
+}
+
+h3{
+    display: flex;
+    font-family: "K2D", sans-serif;
+    font-size: 35px;
+    padding-left: 85px;
+}
+
+.picture{
+    display: flex;
+    flex-direction: row;
+    width: 450px;
+    height: 400px;
+    margin-top: 20px;
+    margin-left: 70px;
+    gap: 30px
+}
+
+.alta{
+    padding-top: 30px;
+    color: rgb(255, 255, 255);
+}
+
+.continue{
+    padding-top: 60px;
+    color: rgb(255, 255, 255);
+}
+
+.minha-lista{
+    padding-top: 60px;
+    color: rgb(255, 255, 255);
+}
+
+.recomen{
+    padding-top: 60px;
+    color: rgb(255, 255, 255);
+}
+ footer{
+    display: flex;
+    flex-direction: row;
+    position:relative;
+    font-size: 1px;
+    padding: 7px 0px 0px 0;
+    padding-top: 20px;
+}
+
+.autor{
+    display: flex;
+    flex-direction: row;
+    position:relative;
+    font-size: 25px;
+    padding: 7px 35px 20px 0;
+    background-color: rgb(86, 12, 121);
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+    padding-left: 695px;
+    padding-right: 695px;
+    justify-content:center; 
+    justify-content: space-between;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+    *{
+        color: rgb(255, 255, 255);
+    }
+
+    header {
+        flex-direction: row;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .menu, .movie, .nome {
+        font-size: 16px;
+        margin: 0;
+        padding: 5px 0;
+    }
+
+    .menu{
+        padding-left: 2%;
+    }
+
+    .movie{
+        padding-left: 20%;
+    }
+
+    .nome{
+        padding-left: 45%;
+    }
+
+    #perfil {
+        width: 50px;
+        height: 50px;
+        margin-left:75%;
+        margin-top: 10px;
+    }
+
+    .search-box {
+        flex-direction: row;
+        margin-top: 20px;
+    }
+
+    .search-cat, .search-nome {
+        margin-left: 50%;
+        width: 80%;
+        font-size: 14px;
+        justify-content: space-between;
+        padding-left: 40%;
+    }
+
+    .search-nome{
+        margin-left: 10%;
+    }
+
+    .btn-enter, .btn-enter1 {
+        width: 50%;
+        height: 2%;
+        margin-left: 0;
+        margin-top: 10px;
+        justify-content: space-between;
+    }
+
+    #destaque {
+        width: 100%;
+        height: 150%;
+        margin-top: 20px;
+    }
+
+    #fundo {
+        width: 40%;
+        height: 300px;
+        margin-left: 50%;
+        margin-top: 2%;
+        margin-bottom: -10%;
+    }
+
+    .descricao {
+        margin-top: -200px;
+        font-size: -2%;
+    }
+
+    .name {
+        font-size: 20px;
+        padding-right: 17%;
+        margin-top: -5%;
+        color: rgb(255, 255, 255);
+    }
+
+    p {
+        font-size: 10px;
+        padding-right: 12%;
+        padding-left: 52%;
+        color: rgb(255, 255, 255);
+        padding-bottom: 10%;
+    }
+
+    .lista {
+        flex-direction: column;
+        padding-left: 80%;
+        padding-right: 10%;
+        margin-top: -5%;
+        color: rgb(255, 255, 255);
+    }
+
+    .picture {
+            display: flex;
+            flex-wrap: nowrap; 
+            gap: 20px;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            padding-left: 12%;
+            padding-right: 12%;
+    }
+
+    .picture img {
+        width: 120px;
+        height: 170px;
+        margin-left: -2%;
+        display: flex;
+        flex: row;
+        color: rgb(255, 255, 255);
+    }
+
+    .alta{
+        margin-left: -22%;
+        margin-top: -20%;
+    }
+
+    .continue{
+        margin-left: -22%;
+        margin-top: -30%;
+    }
+
+    .minha-lista{
+        margin-left: -22%;
+        margin-top: -30%;
+    }
+
+    .recomen{
+        margin-left: -22%;
+        margin-top: -30%;
+    }
+
+    h3{
+        margin-left: 10%;
+        font-size: 140%;
+    }
+
+    .lista{
+        margin-left: -20%;
+        flex-direction: row;
+        padding-top: 5%;
+    }
+
+    .assistir{
+        font-size: 60%;
+        color: rgb(255, 255, 255);
+    }
+
+    .add{
+        font-size: 60%;
+        color: rgb(255, 255, 255);
+    }
+
+    footer {
+        display: block;
+        width: 100%;
+        padding-left: 0; 
+    }
+
+    .autor {
+        background-color: rgb(86, 12, 121); 
+        text-align: center; 
+        width: 100%; 
+        padding: 10px; 
+        box-sizing: border-box;
+        margin-top: -5%;
+    }
+
+    article {
+    line-height: -200%;
+    }
+
+    section {
+        padding-top: 20%;
+        
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    *{
+        color: rgb(255, 255, 255);
+    }
+
+    header {
+        flex-direction: row;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .menu, .movie, .nome {
+        font-size: 16px;
+        margin: 0;
+        padding: 5px 0;
+    }
+
+    .menu{
+        padding-left: 2%;
+    }
+
+    .movie{
+        padding-left: 20%;
+    }
+
+    .nome{
+        padding-left: 45%;
+    }
+
+    #perfil {
+        width: 50px;
+        height: 50px;
+        margin-left:75%;
+        margin-top: 10px;
+    }
+
+    .search-box {
+        flex-direction: row;
+        margin-top: 20px;
+    }
+
+    .search-cat, .search-nome {
+        margin-left: 50%;
+        width: 80%;
+        font-size: 14px;
+        justify-content: space-between;
+        padding-left: 40%;
+    }
+
+    .search-nome{
+        margin-left: 10%;
+    }
+
+    .btn-enter, .btn-enter1 {
+        width: 50%;
+        height: 2%;
+        margin-left: 0;
+        margin-top: 10px;
+        justify-content: space-between;
+    }
+
+    #destaque {
+        width: 100%;
+        height: 150%;
+        margin-top: 20px;
+    }
+
+    #fundo {
+        width: 40%;
+        height: 300px;
+        margin-left: 50%;
+        margin-top: 2%;
+    }
+
+    .descricao {
+        margin-top: -200px;
+        font-size: -2%;
+    }
+
+    .name {
+        font-size: 20px;
+        padding-right: 17%;
+        margin-top: -5%;
+        color: rgb(255, 255, 255);
+    }
+
+    p {
+        font-size: 10px;
+        padding-right: 12%;
+        padding-left: 52%;
+        color: rgb(255, 255, 255);
+        padding-bottom: 10%;
+    }
+
+    .lista {
+        flex-direction: column;
+        padding-left: 50%;
+        padding-right: 10%;
+        margin-top: -10%;
+        color: rgb(255, 255, 255);
+    }
+
+    .picture {
+            display: flex;
+            flex-wrap: nowrap; 
+            gap: 20px;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            padding-left: 12%;
+            padding-right: 12%;
+    }
+
+    .picture img {
+        width: 100px;
+        height: 120px;
+        margin-left: -2%;
+        display: flex;
+        flex: row;
+        color: rgb(255, 255, 255);
+    }
+
+    .alta{
+        margin-left: -22%;
+        margin-top: -20%;
+    }
+
+    .continue{
+        margin-left: -22%;
+        margin-top: -52%;
+    }
+
+    .minha-lista{
+        margin-left: -22%;
+        margin-top: -52%;
+    }
+
+    .recomen{
+        margin-left: -22%;
+        margin-top: -52%;
+    }
+
+    h3{
+        margin-left: 10%;
+        font-size: 140%;
+    }
+
+    .lista{
+        margin-left: -20%;
+        flex-direction: row;
+        padding-top: 5%;
+    }
+
+    .assistir{
+        font-size: 60%;
+        color: rgb(255, 255, 255);
+    }
+
+    .add{
+        font-size: 60%;
+        color: rgb(255, 255, 255);
+    }
+
+    footer {
+        display: block;
+        width: 100%;
+        padding-left: 0; 
+        margin-top: -40%;
+    }
+
+    .autor {
+        background-color: rgb(86, 12, 121); 
+        text-align: center; 
+        width: 100%; 
+        padding: 10px; 
+        box-sizing: border-box;
+        margin-top: -5%;
+    }
+
+    article {
+    line-height: -200%;
+    }
+
+    section {
+        padding-top: 20%;
+    }
+}

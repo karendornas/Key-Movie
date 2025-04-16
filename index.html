@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body onload="carrega_dados()">
+    <header class="home">
+            <a class="menu" href="#">MENU</a>
+            <a class="movie" href="#">KEY MOVIE</a>
+            <a class="nome" href="#">NOME</a>
+
+            <img src="https://picsum.photos/200" alt="image" id="perfil">
+    </header>
+
+    <main>
+        <nav class="search-box">
+
+            <input type="text" class="search-cat" placeholder="BUSQUE POR CATEGORIA">
+            <button class="btn-enter1">BUSCAR</button>
+            <input type="text" class="search-nome" placeholder="BUSQUE POR NOME">
+            <button class="btn-enter">BUSCAR</button>
+        </nav>
+        <article>
+                <img src="https://picsum.photos/200/300" alt= image id="destaque">
+                <img src="./Imagens/fundo-preto.png" alt=fundo id="fundo">
+                <div class="descricao">
+                    <h1><a class="name" href="#">NOME DO FILME</a></h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae fugiat saepe laborum? Non, similique nihil voluptatibus rerum dignissimos officiis quibusdam suscipit qui corporis id hic, animi quaerat harum quidem fugiat ex numquam porro debitis deleniti. Voluptas nobis exercitationem provident pariatur.</p>
+                </div>
+                <nav class="lista">
+                    <h2><a class="assistir" href="#">ASSISTIR AGORA</a></h2>
+                    <h2><a class="add" href="#">ADICONAR À LISTA</a></h2>
+                </nav>
+        </article>
+        <section>
+            <div class="alta">
+                <h3>EM ALTA</h3>
+                <div class="picture">
+                    <img class="imagem" src="./Imagens/wicked_home.jpg" alt="image" onclick="detalhe_filme(this)">
+                    <img class="imagem" src="./Imagens/ainda_estou_home.jpg" alt="image" onclick="detalhe_filme(this)">
+                    <img class="imagem" src="./Imagens/oppeheimer_home.jpg" alt="image" onclick="detalhe_filme(this)">
+                    <img class="imagem" src="./Imagens/barbie_home.jpg" alt="image" onclick="detalhe_filme(this)">
+                    <img class="imagem" src="https://picsum.photos/200/300" alt="image" onclick="detalhe_filme(this)">
+                    <img class="imagem" src="https://picsum.photos/200/300" alt="image" onclick="detalhe_filme(this)">
+                    </div>
+                </div>
+            </div>
+            <div class="continue">
+                <h3>CONTINUAR ASSISTINDO</h3>
+                <div class="picture">
+                    <img class="imagem" src="https://picsum.photos/200/300" alt="image" onclick="detalhe_filme(this)">
+                    <img class="imagem" src="https://picsum.photos/200/300" alt="image" onclick="detalhe_filme(this)">
+                    <img class="imagem" src="https://picsum.photos/200/300" alt="image" onclick="detalhe_filme(this)">
+                    <img class="imagem" src="https://picsum.photos/200/300" alt="image" onclick="detalhe_filme(this)">
+                    <img class="imagem" src="https://picsum.photos/200/300" alt="image" onclick="detalhe_filme(this)">
+                    <img class="imagem" src="https://picsum.photos/200/300" alt="image" onclick="detalhe_filme(this)">
+                </div>
+            </div>
+            <div class="minha-lista">
+                <h3>MINHA LISTA</h3>
+                <div class="picture">
+                    <img class="imagem" src="https://picsum.photos/200/300" alt="image" onclick="detalhe_filme(this)">
+                    <img class="imagem" src="https://picsum.photos/200/300" alt="image" onclick="detalhe_filme(this)">
+                    <img class="imagem" src="https://picsum.photos/200/300" alt="image" onclick="detalhe_filme(this)">
+                    <img class="imagem" src="https://picsum.photos/200/300" alt="image" onclick="detalhe_filme(this)">
+                    <img class="imagem" src="https://picsum.photos/200/300" alt="image" onclick="detalhe_filme(this)">
+                    <img class="imagem" src="https://picsum.photos/200/300" alt="image" onclick="detalhe_filme(this)">
+                </div>
+            </div>
+            <div class="recomen">
+                <h3>RECOMENDAÇÕES</h3>
+                <div class="picture">
+                    <img class="imagem" src="https://picsum.photos/200/300" alt="image" onclick="detalhe_filme(this)">
+                    <img class="imagem" src="https://picsum.photos/200/300" alt="image" onclick="detalhe_filme(this)">
+                    <img class="imagem" src="https://picsum.photos/200/300" alt="image" onclick="detalhe_filme(this)">
+                    <img class="imagem" src="https://picsum.photos/200/300" alt="image" onclick="detalhe_filme(this)">
+                    <img class="imagem" src="https://picsum.photos/200/300" alt="image" onclick="detalhe_filme(this)">
+                    <img class="imagem" alt="image" onclick="detalhe_filme(this)">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="autor">
+            <div>Todos os direitos reservados.</div>
+            <div>Desenvolvido por Karen Dornas.</div>
+        </div>
+    </footer>
+
+    <script>
+
+        function detalhe_filme(img){
+            const url = `detalhes.html?id=${img.getAttribute('image-id')}`;
+            window.location.href = url;
+        }
+
+    </script>
+
+    <script>
+        function carrega_dados(){
+            document.querySelectorAll('.imagem').forEach
+            ((img, index) => {
+                img.src = dados[index].imagem_home
+                img.setAttribute("image-id", dados[index].id)
+            });
+        }
+
+    </script>
+
+</body>
+</html>
