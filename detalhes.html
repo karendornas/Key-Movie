@@ -4,7 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalhes do Filme</title>
-    <link rel="stylesheet" href="detalhes.css">
+    <link rel="styles<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Detalhes do Filme</title>
+        <link rel="stylesheet" href="detalhes.css">
+        <script src="app.js"></script>
+    </head>
+    <body>
+        
+        <header>
+            <div class="teste1">
+                <!-- <a class="menu" href="#">MENU</a> -->
+                <a class="movie" href="index.html">KEY MOVIE</a>
+            </div>
+    
+            <div class="teste2">
+                <img src=".\Imagens\perfil.jpg" alt="image" id="perfil">
+                <a class="nome" href="#">KAREN</a>
+            </div>
+        </header>
+    
+        <main>
+            <img src="./Imagens/ainda_estou.jpg" alt="image" id="foto1">
+            <div class="botoes">
+                <button class="btn">ASSISTIR AGORA</button>
+                <button class="btn">ADICIONAR À LISTA</button>
+            </div>  
+            <h1 id="nome_filme">NOME DO FILME</h1>
+            <div class="ano_dir">
+                <h2 id="ano">ANO: </h2>
+                <h2 id="diretor">DIRETOR: </h2>
+            </div>
+            <h2 class="sobre_filme">SOBRE O FILME</h2>
+            <p id="descricao">DESCRIÇÃO</p>
+        </main>
+    
+        <footer>
+            <div class="autor">
+                <div>Todos os direitos reservados.</div>
+                <div>Desenvolvido por Karen Dornas.</div>
+            </div>
+        </footer>
+    
+        <script>
+            let id = new URLSearchParams(location.search).get('id')
+            dado = dados.find(item => item.id == id)
+            if(dado){
+                document.getElementById("foto1").src = dado.imagem
+                document.getElementById("nome_filme").innerHTML = dado.titulo
+                document.getElementById("ano").innerHTML = `ANO: ${dado.ano_lancamento}`
+                document.getElementById("diretor").innerHTML = `DIRETOR: ${dado.diretor}`
+                document.getElementById("descricao").innerHTML = dado.descricao
+            }
+            else{
+                alert("Filme não encontrado!");
+            }
+    
+        </script>
+    </body>
+    </html>heet" href="detalhes.css">
     <script src="app.js"></script>
 </head>
 <body>

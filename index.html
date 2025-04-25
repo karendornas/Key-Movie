@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>KEY MOVIE</title>
     <link rel="stylesheet" href="styles.css">
     <script src="app.js" defer></script>
 </head>
 <body onload="carrega_dados()">
     <header class="home">
-            <a class="menu" href="#">MENU</a>
-            <a class="movie" href="#">KEY MOVIE</a>
-            <a class="nome" href="#">NOME</a>
+            <!-- <img src=".\Imagens\logo.png" alt="image" id="logo"> -->
+            <!-- <a class="menu" href="#">MENU</a> -->
+            <a class="movie" href="index.html">KEY MOVIE</a>
+            <a class="nome" href="#">KAREN</a>
 
-            <img src="https://picsum.photos/200" alt="image" id="perfil">
+            <img src=".\Imagens\perfil.jpg" alt="image" id="perfil">
     </header>
 
     <main>
@@ -24,17 +25,20 @@
             <input type="text" class="search-nome" placeholder="BUSQUE POR NOME">
             <button class="btn-enter">BUSCAR</button>
         </nav>
-        <article>
-                <img src="https://picsum.photos/200/300" alt= image id="destaque">
-                <img src="./Imagens/fundo-preto.png" alt=fundo id="fundo">
-                <div class="descricao">
-                    <h1><a class="name" href="#">NOME DO FILME</a></h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae fugiat saepe laborum? Non, similique nihil voluptatibus rerum dignissimos officiis quibusdam suscipit qui corporis id hic, animi quaerat harum quidem fugiat ex numquam porro debitis deleniti. Voluptas nobis exercitationem provident pariatur.</p>
-                </div>
+        <article id="meu-article">
+            <button class="left" onclick="troca_filme_left()">&lt</button>
+            
+            <!-- <img src=".\Imagens\attack.jpg" alt= image id="destaque"> -->
+            <!-- <img src="./Imagens/fundo-preto.png" alt=fundo id="fundo"> -->
+            <div class="descricao">
+                <h1><a id="name" href="#"></a></h1>
+                <p id="sinopse"></p>
                 <nav class="lista">
                     <h2><a class="assistir" href="#">ASSISTIR AGORA</a></h2>
                     <h2><a class="add" href="#">ADICONAR À LISTA</a></h2>
                 </nav>
+            </div>
+            <button class="right" onclick="troca_filme_right()">&gt</button>
         </article>
         <section>
             <div class="alta">
@@ -86,11 +90,44 @@
     </main>
 
     <footer>
-        <div class="autor">
-            <div>Todos os direitos reservados.</div>
-            <div>Desenvolvido por Karen Dornas.</div>
+        <div class="conteudo1">
+            <h3>INFORMAÇÕES DA ALUNA:</h3>
         </div>
+        <div class="conteudo2">
+            <div class="sobre_mim">
+                <h3>SOBRE MIM</h3>
+                <h4>ESTE SITE FOI DESENVOLVIDO POR UMA ESTUDANTE DO CURSO DE SISTEMAS DE INFORMAÇÃO DA PUC MINAS, COMO PARTE DE UM PROJETO ACADÊMICO DA DISCIPLINA DE DESENVOLVIMENTO DE INTERFACES WEB.</h4>
+            </div>
+            <div class="foto_karen">
+                <img src="Imagens/karen.jpg" alt="Foto Karen">
+            </div>
+            <div class="info_karen">
+                <h4>ALUNA: KAREN DORNAS OLIVEIRA</h4>
+                <h4>CURSO: SISTEMAS DE INFROMAÇÃO</h4>
+                <h4>TURMA: MANHÃ</h4>
+                <h4>REDES SOCIAIS:</h4>
+            </div>
+        </div>
+        
+
     </footer>
+    <!-- <footer class="mx-5 d-flex align-items-center">
+        <div class="my-3" style="max-width: 700px; padding-right: 10px; padding-left: 15%;">        
+            <p style="color: white"><span style="font-size: 40px; padding-left: 10px; color: white">SOBRE MIM</span><br>ESTE SITE FOI DESENVOLVIDO POR UMA ESTUDANTE DO CURSO DE SISTEMAS DE INFORMAÇÃO DA PUC MINAS, COMO PARTE DE UM PROJETO ACADÊMICO DA DISCIPLINA DE DESENVOLVIMENTO DE INTERFACES WEB.</p>
+        </div>
+        <div class="d-lg-flex my-3">
+            <div class=" d-flex align-items-center" style="padding-left: 400px; padding-top: 1%;">        
+                <img src="Imagens/karen.jpg" style="border-radius: 50%; width: 200px; height: 200px">
+
+            </div>
+            <div class="pt-5 ps-3" style="color: white; padding-top: 5%;">
+                <p>ALUNA: KAREN DORNAS OLIVEIRA</p>
+                <p>CURSO: SISTEMAS DE INFROMAÇÃO</p>
+                <p>TURMA: MANHÃ</p>
+                <p>REDES SOCIAIS:</p>
+            </div>
+        </div>
+    </footer>  -->
 
     <script>
 
@@ -102,13 +139,36 @@
     </script>
 
     <script>
+        var indice = 0;
+
         function carrega_dados(){
             document.querySelectorAll('.imagem').forEach
             ((img, index) => {
                 img.src = dados[index].imagem_home
                 img.setAttribute("image-id", dados[index].id)
             });
+
+
+            document.getElementById("meu-article").style.backgroundImage = `url(${dados[indice].imagem})`;
+            document.getElementById("name").innerHTML = dados[indice].titulo;
+            document.getElementById("sinopse").innerHTML = dados[indice].descricao;
+
         }
+
+        function troca_filme_left(){
+            indice = (indice - 1 + 10) % 10;
+            document.getElementById("meu-article").style.backgroundImage = `url(${dados[indice].imagem})`;
+            document.getElementById("name").innerHTML = dados[indice].titulo;
+            document.getElementById("sinopse").innerHTML = dados[indice].descricao;
+        }
+
+        function troca_filme_right(){
+            indice = (indice + 1 + 10) % 10;
+            document.getElementById("meu-article").style.backgroundImage = `url(${dados[indice].imagem})`;
+            document.getElementById("name").innerHTML = dados[indice].titulo;
+            document.getElementById("sinopse").innerHTML = dados[indice].descricao;
+        }
+
 
     </script>
 
