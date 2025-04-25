@@ -885,28 +885,63 @@ h3{
         background-color: black;
     }
 
-    footer {
-        display: block;
-        width: 100%;
-        padding-left: 0; 
-        margin-top: -10%;
+    footer{
+        background-color: black;
+        margin-top: 1%;
+        display: flex;
+        flex-direction: column;
+        font-family: "K2D", sans-serif;
     }
-
-    .autor {
-        background-color: rgb(86, 12, 121); 
-        text-align: center; 
-        width: 100%; 
-        padding: 10px; 
-        box-sizing: border-box;
-        margin-top: -5%;
+    
+    .conteudo1{
+        display: flex;
+        /* padding-top: 1%; */
+        /* margin: 0; */
+        background-color: blue;
+        /* justify-content:center; */
     }
-
-    article {
-    line-height: -200%;
+    
+    .conteudo2{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 300px;
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+    
+    .sobre_mim{
+        background-color: red;
+        width: 40%;
+        padding-top: 2%;
+    }
+    
+    h3{
+        /* padding-left: 30%; */
+    }
+    
+    h4{
+        padding-top: 2%;
+        padding-left: 2%;
+        padding-right: 2%;
+        font-family: "K2D", sans-serif;
+        /* text-align: center; */
+    }
+    
+    .foto_karen{
+        /* display: flex; */
+        width: 60px;
+        height: 6%;
+        border-radius: 100%;
+    }
+    
+    .info_karen{
+        /* background-color: green; */
+        width: 25%;
+        font-family: "K2D", sans-serif;
     }
 
     section {
         padding-top: 20%;
         
     }
-}
